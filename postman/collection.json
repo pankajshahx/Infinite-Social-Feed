@@ -1,0 +1,187 @@
+{
+  "info": {
+    "_postman_id": "f2526267-ce01-438b-92c1-0bd1bd70bbd7",
+    "name": "New Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "46711913"
+  },
+  "item": [
+    {
+      "name": "localhost:3000/users/register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"username\": \"amit\",\r\n  \"email\": \"amit@example.com\",\r\n  \"password\": \"Amit@123\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:3000/users/register",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["users", "register"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:3000/users/login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"amit@example.com\",\r\n  \"password\": \"Amit@123\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:3000/users/login",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["users", "login"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:3000/users/Profile",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"pankaj@example.com\",\r\n  \"password\": \"123456\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:3000/users/profile",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["users", "profile"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:3000/users/logout",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"pankaj@example.com\",\r\n  \"password\": \"123456\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:3000/users/logout",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["users", "logout"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:3000/posts",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"content\": \"This is my first post\",\r\n  \"imageUrl\": \"https://example.com/photo.jpg\",\r\n  \"tags\": [\"coding\", \"system-design\",\"gym\",\"Singing\"]\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:3000/posts",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["posts"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:3000/like-post",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"postId\":\"689c50c6093bfbc8862db54a\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:3000/likes",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["likes"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:3000/feed",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"content\": \"This is my first post\",\r\n  \"imageUrl\": \"https://example.com/photo.jpg\",\r\n  \"tags\": [\"music\", \"fun\"]\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:3000/feed?page=1&limit=10",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["feed"],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "limit",
+              "value": "10"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
