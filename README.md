@@ -83,9 +83,8 @@ cd infinite-social-feed-backend
 PORT=3000
 NODE_ENV=development
 MONGO_URL=mongodb://mongodb:27017/infinite-social-feed
-JWT_SECRET=supersecretkey123
+JWT_SECRET=PANKAJ_INFINITE_FEED
 JWT_EXPIRES_IN=2h
-CORS_ORIGIN=http://localhost:5173
 ```
 
 ### 3️⃣ Start with Docker
