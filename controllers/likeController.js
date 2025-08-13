@@ -7,7 +7,7 @@ const likePost = async (req, res) => {
       return res.status(400).json({ message: "postId is required" });
     }
 
-    const userId = req.user.id; // from authMiddleware
+    const userId = req.user.id;
     const like = await likeService.likePost({ userId, postId });
 
     res.status(201).json({ message: "Post liked successfully", like });

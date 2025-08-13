@@ -1,7 +1,5 @@
-// controllers/userController.js
 const userService = require("../services/userService");
 
-// POST /users/register
 const register = async (req, res) => {
   try {
     const { username, email, password } = req.body;
@@ -22,7 +20,6 @@ const register = async (req, res) => {
   }
 };
 
-// POST /users/login
 const login = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -34,12 +31,11 @@ const login = async (req, res) => {
 
     const { user, token } = await userService.loginUser({ email, password });
 
-    // Set token in cookie:
     res.cookie("token", token, {
       httpOnly: true,
-      maxAge: 2 * 60 * 60 * 1000, // 2 hours in milliseconds
-      sameSite: "strict", // security option
-      secure: process.env.NODE_ENV === "production", // send cookie only over https in prod
+      maxAge: 2 * 60 * 60 * 1000,
+      sameSite: "strict",
+      secure: process.env.NODE_ENV === "production",
     });
 
     res.json({ message: "Login successful", user });
@@ -48,7 +44,6 @@ const login = async (req, res) => {
   }
 };
 
-// In userController.js
 const logout = (req, res) => {
   res.clearCookie("token", {
     httpOnly: true,
@@ -60,7 +55,6 @@ const logout = (req, res) => {
 
 const User = require("../models/User");
 
-// Show logged-in user's profile
 const getProfile = async (req, res) => {
   try {
     if (!req.user) {
