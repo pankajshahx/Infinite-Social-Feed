@@ -2,7 +2,7 @@ const feedService = require("../services/feedService");
 
 const getFeed = async (req, res) => {
   try {
-    const userId = req.user.id; // From auth middleware
+    const userId = req.user.id;
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 10;
 

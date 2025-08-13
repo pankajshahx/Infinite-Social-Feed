@@ -26,7 +26,6 @@ router.post(
 
 router.post("/logout", userController.logout);
 
-// New profile route (protected)
 router.get("/profile", authMiddleware, userController.getProfile);
 
 module.exports = router;

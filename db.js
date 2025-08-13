@@ -1,4 +1,3 @@
-// db.js
 const mongoose = require("mongoose");
 
 const mongoUrl = process.env.MONGO_URL;

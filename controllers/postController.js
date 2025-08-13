@@ -1,4 +1,3 @@
-// controllers/postController.js
 const postService = require("../services/postService");
 
 const createPost = async (req, res) => {
@@ -9,7 +8,6 @@ const createPost = async (req, res) => {
       return res.status(400).json({ message: "Content is required" });
     }
 
-    // `req.user` is set by authMiddleware after verifying token
     const authorId = req.user.id;
 
     const post = await postService.createPost({
